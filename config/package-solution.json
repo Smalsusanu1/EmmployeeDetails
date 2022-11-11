@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "emmployee-details-client-side-solution",
+    "id": "4342c85e-9629-4569-b2f9-7a0670a0c417",
+    "version": "1.1.6.7",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.15.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "emmployee-details description"
+      },
+      "longDescription": {
+        "default": "emmployee-details description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "emmployee-details Feature",
+        "description": "The feature that activates elements of the emmployee-details solution.",
+        "id": "e2c41684-80c1-43e8-8a4a-f4a1d4c2f657",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/emmployee-details.sppkg"
+  }
+}
