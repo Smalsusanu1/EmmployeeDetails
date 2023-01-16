@@ -7,7 +7,6 @@ import Tabs from "./Tabs/Tabs"
 import Tab from "./Tabs/Tab"
 import './Tabs/styles.css';
 import { arraysEqual, Modal } from 'office-ui-fabric-react';
-import './scroll.css'
 import Tooltip from './Tooltip/popup';
 import ImagesC from './ImagesC/Images';
 import * as Moment from 'moment';
