@@ -2,7 +2,7 @@ name: SPFx CICD with Office 365 CLI
 
 on: push
 
-# Variables that are available for all the jobs in the workflow
+# Variables that are available for all the jobs in the workflowe
 env:
   SPPKG_FILE_NAME: 'emmployee-details.sppkg'
 
