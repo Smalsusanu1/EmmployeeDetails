@@ -1,0 +1,48 @@
+name: NodeJS with Gulp
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build
+      run: |
+        npm install
+        gulp bundle --ship
+        
+          
+         # CLI for Microsoft 365 login action
+    - name: Login to tenant
+      uses: pnp/action-cli-login@v2.0.0
+      with:
+        ADMIN_USERNAME:  ${{ secrets.adminUsername }}
+        ADMIN_PASSWORD:  ${{ secrets.adminPassword }}
+    
+    # CLI for Microsoft 365 deploy app action
+    # Use either option 1 or option 2
+    
+    # Option 1 - Deploy app at tenant level
+    - name: Option 1 - Deploy app to tenant
+      id: climicrosoft365deploy # optional - use if output needs to be used
+      uses: pnp/action-cli-deploy@v2.0.0
+      with:
+        APP_FILE_PATH: sharepoint/solution/emmployee-details.sppkg
+        SKIP_FEATURE_DEPLOYMENT: true
+        OVERWRITE: true
